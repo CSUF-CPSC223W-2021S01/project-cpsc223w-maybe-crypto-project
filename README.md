@@ -1,7 +1,7 @@
 # project-cpsc223w-maybe-crypto-project
 project-cpsc223w-maybe-crypto-project created by GitHub Classroom
 
-##Team Members
+## Team Members
 
 Conner Cook
 Jose Hernandez
