@@ -15,6 +15,7 @@
 		5D5047BA25F9DA01002C9A83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5047B825F9DA01002C9A83 /* LaunchScreen.storyboard */; };
 		5D5047C525F9DA02002C9A83 /* iPantryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5047C425F9DA02002C9A83 /* iPantryTests.swift */; };
 		5D5047D025F9DA02002C9A83 /* iPantryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5047CF25F9DA02002C9A83 /* iPantryUITests.swift */; };
+		5D5047E125F9DAF5002C9A83 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5047E025F9DAF5002C9A83 /* TestFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5D5047CB25F9DA02002C9A83 /* iPantryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPantryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5047CF25F9DA02002C9A83 /* iPantryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPantryUITests.swift; sourceTree = "<group>"; };
 		5D5047D125F9DA02002C9A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D5047E025F9DAF5002C9A83 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5D5047B625F9DA01002C9A83 /* Assets.xcassets */,
 				5D5047B825F9DA01002C9A83 /* LaunchScreen.storyboard */,
 				5D5047BB25F9DA01002C9A83 /* Info.plist */,
+				5D5047E025F9DAF5002C9A83 /* TestFile.swift */,
 			);
 			path = iPantry;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5047B225F9D9FF002C9A83 /* ViewController.swift in Sources */,
+				5D5047E125F9DAF5002C9A83 /* TestFile.swift in Sources */,
 				5D5047AE25F9D9FF002C9A83 /* AppDelegate.swift in Sources */,
 				5D5047B025F9D9FF002C9A83 /* SceneDelegate.swift in Sources */,
 			);
