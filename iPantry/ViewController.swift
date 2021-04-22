@@ -173,10 +173,13 @@ extension ViewController {
 }
 
 
+
 // SafariViewControllerDelegate
 extension ViewController: SFSafariViewControllerDelegate {
   func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
     captureSession.startRunning()
   }
+=======
+   
 }
 
