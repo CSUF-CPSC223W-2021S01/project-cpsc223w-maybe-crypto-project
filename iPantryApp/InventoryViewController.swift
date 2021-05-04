@@ -18,6 +18,7 @@ class InventoryViewController: UIViewController {
         self.view.addGestureRecognizer(leftSwipe)
     }
     
+    //testing
 
     /*
     // MARK: - Navigation
