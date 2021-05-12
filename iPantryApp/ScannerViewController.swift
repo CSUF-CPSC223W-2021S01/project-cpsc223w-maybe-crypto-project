@@ -28,6 +28,10 @@ class ScannerViewController: UIViewController {
   // MARK: - Override Functions
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let url = "https://api.barcodelookup.com/v2/products?search=GPS%20Navigation%20System&formatted=y&key=ulqsgcj953k2v5fepyvqx8q40e8non"
+    getData(from: url)
+    
     checkPermissions()
     setupCameraLiveView()
     
@@ -139,6 +143,9 @@ extension ScannerViewController {
   // MARK: - Handler
   func observationHandler(payload: String?) {
     // TODO: Open it in Safari
+    if let url = URL(string: "https://www.hackingwithswift.com"){
+        UIApplication.shared.open(url)
+    }
   }
 }
 
@@ -200,6 +207,48 @@ extension ScannerViewController: SFSafariViewControllerDelegate {
   }
 }
 
+struct Response: Codable{
+    let results : MyResult
+    let status: String
+}
 
+struct MyResult: Codable{
+    let dairy: String
+    let fruit: String
+    let vegetable: String
+    let produce: String
+    
+    let Barcode: String
+}
 
+private func getData(from url: String){
+    
+    let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data , response, error in
+        guard let data = data, error == nil else{
+            print("Something went wrong")
+            return
+        }
+        var result : Response?
+        do{
+            result = try JSONDecoder().decode(Response.self, from: data)
+        }
+        catch{
+            print("failed to convert \(error.localizedDescription)")
+        }
+        
+        guard let json = result else{
+            return
+        }
+        
+        print(json.status)
+        print(json.results.dairy)
+        print(json.results.fruit)
+        print(json.results.vegetable)
+    })
+    
+    task.resume()
+}
 
+//pull everything from API then filter
+//
+//berries, fruits, veges, dairy
