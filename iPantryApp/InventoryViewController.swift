@@ -8,6 +8,7 @@
 import UIKit
 
 class InventoryViewController: UIViewController {
+
     
     //temporary array that holds the items to be displayed
     var inventory = [
@@ -20,17 +21,18 @@ class InventoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //swipe left gesture to camera page
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(leftSwipe)
         
+        //swipe left gesture to camera page
+//        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+//        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
+//        self.view.addGestureRecognizer(leftSwipe)
+//
         //initiates the delegate and datasource
-        inventoryView.delegate = self
-        inventoryView.dataSource = self
+//        inventoryView.delegate = self
+//        inventoryView.dataSource = self
     }
     
+
     // swipe left gesture to remove inventory items from table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -40,6 +42,10 @@ class InventoryViewController: UIViewController {
         
         }
     }
+    
+    
+   
+
     
 
     /*
@@ -65,6 +71,7 @@ extension InventoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inventory.count
     }
+    
     // Displays the items to each row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableView.dequeueReusableCell(withIdentifier: "item", for: indexPath)

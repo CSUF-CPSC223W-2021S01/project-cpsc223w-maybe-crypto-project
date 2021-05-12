@@ -1,28 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fzv-Jj-UEf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inventory View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="1sH-Xd-B8h">
+            <objects>
+                <tabBarController id="Fzv-Jj-UEf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Ed-UP-cSM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RXt-gJ-vQY" kind="relationship" relationship="viewControllers" id="DdV-I7-bfb"/>
+                        <segue destination="YT6-lv-W7z" kind="relationship" relationship="viewControllers" id="H9B-pj-LcU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LD2-TJ-Olj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1417" y="-2424"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="bSz-6e-s2m">
+            <objects>
+                <navigationController id="YT6-lv-W7z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="t9a-vu-CBy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUB-rN-wQF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ulD-AO-G4D" kind="relationship" relationship="rootViewController" id="a3j-Zg-Qad"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ggy-7d-zfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="-1645"/>
+        </scene>
+        <!--Inventory-->
         <scene sceneID="AEK-et-fsZ">
             <objects>
-                <viewController id="EcE-4H-PMZ" customClass="InventoryViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EcE-4H-PMZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Kf-BW-cqD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ez2-3z-aUr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="item" id="lP1-72-THZ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lP1-72-THZ" id="NU9-QG-b5C">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -35,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="eb6-WU-5E2"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Inventory" image="cart.circle.fill" catalog="system" selectedImage="cart.circle" id="FGy-5s-Igk"/>
                     <navigationItem key="navigationItem" id="eWY-ds-S7m"/>
                     <connections>
                         <outlet property="inventoryView" destination="ez2-3z-aUr" id="WZy-FM-at5"/>
@@ -43,18 +79,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJN-oD-lYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1159.4202898550725" y="-376.33928571428572"/>
+            <point key="canvasLocation" x="1090" y="-263"/>
         </scene>
-        <!--Scanner View Controller-->
+        <!--Scanner-->
+        <scene sceneID="9TH-Bl-qTn">
+            <objects>
+                <viewController id="QSC-og-yi1" customClass="ScannerViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f7X-Sm-SmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zDd-dY-epP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scanner" id="3Xd-Ve-Hqo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BME-J5-3tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2129" y="-948"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="eDI-Nx-Qde">
+            <objects>
+                <viewController id="ulD-AO-G4D" customClass="InventoryViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4Y-xj-CK5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-rT-BrU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AdC-Q4-8CX">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AdC-Q4-8CX" id="plF-Rk-IXs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="McE-Nv-0cX"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inventory" id="nO1-Vf-iGM">
+                        <barButtonItem key="rightBarButtonItem" title="Add Item" id="LXw-F9-rdA">
+                            <connections>
+                                <segue destination="kzx-eA-WtO" kind="show" id="gkD-p7-avq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inventoryView" destination="zmJ-rT-BrU" id="qL2-lh-cit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qru-iT-E5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1139.1304347826087" y="-948.21428571428567"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="js3-de-tKK">
+            <objects>
+                <viewController id="kzx-eA-WtO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gmc-OK-3nq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h4z-r9-wv6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="mJm-XE-1Zc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhg-G9-GKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="-948"/>
+        </scene>
+        <!--Scanner-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ScannerViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Scanner" image="camera.circle.fill" catalog="system" selectedImage="camera.circle" id="k7f-4f-eLN"/>
                     <navigationItem key="navigationItem" id="yU8-Yq-YVp"/>
                     <connections>
                         <segue destination="EcE-4H-PMZ" kind="presentation" identifier="swipeRight" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pov-9a-uWg"/>
@@ -62,10 +173,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-203" y="-387"/>
+            <point key="canvasLocation" x="1881" y="-277"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="l8U-Rg-EDp">
+            <objects>
+                <navigationController id="RXt-gJ-vQY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qhE-FN-ISV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2vC-bV-qVb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QSC-og-yi1" kind="relationship" relationship="rootViewController" id="MbN-zb-7uJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oG7-4i-yep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2128" y="-1645"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l9d-HY-4b0"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera.circle" catalog="system" width="128" height="121"/>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="cart.circle" catalog="system" width="128" height="121"/>
+        <image name="cart.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

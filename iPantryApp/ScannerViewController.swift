@@ -32,17 +32,17 @@ class ScannerViewController: UIViewController {
     setupCameraLiveView()
     
     //swipe right gesture to inventory page
-    let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-    print(rightSwipe)
-    rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
-    self.view.addGestureRecognizer(rightSwipe)
+//    let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+//    print(rightSwipe)
+//    rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+//    self.view.addGestureRecognizer(rightSwipe)
     
   }
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    // Stop Session
-    captureSession.stopRunning()
-  }
+//  override func viewWillDisappear(_ animated: Bool) {
+//    super.viewWillDisappear(animated)
+//    // Stop Session
+//    captureSession.stopRunning()
+//  }
 }
 
 
