@@ -31,7 +31,7 @@ class ScannerViewController: UIViewController {
     checkPermissions()
     setupCameraLiveView()
     
-    //swipe right gesture to inventory page
+//    swipe right gesture to inventory page
 //    let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
 //    print(rightSwipe)
 //    rightSwipe.direction = UISwipeGestureRecognizer.Direction.right

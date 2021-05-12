@@ -22,12 +22,12 @@ class InventoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //swipe left gesture to camera page
+//        swipe left gesture to camera page
 //        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
 //        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
 //        self.view.addGestureRecognizer(leftSwipe)
 //
-        //initiates the delegate and datasource
+//        initiates the delegate and datasource
 //        inventoryView.delegate = self
 //        inventoryView.dataSource = self
     }
