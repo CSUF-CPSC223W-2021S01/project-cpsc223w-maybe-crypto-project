@@ -151,32 +151,32 @@
                                 <rect key="frame" x="69" y="188" width="275" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-PQ-HQw">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-V7-ysp">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="36"/>
+                                                <rect key="frame" x="0.0" y="16.5" width="137.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRF-rh-xdD">
-                                                <rect key="frame" x="137.5" y="1" width="137.5" height="34"/>
+                                                <rect key="frame" x="137.5" y="17.5" width="137.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="k5f-eJ-D6Q">
-                                        <rect key="frame" x="21.5" y="98" width="232" height="36"/>
+                                        <rect key="frame" x="21.5" y="130.5" width="232" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUE-S0-ce2">
-                                                <rect key="frame" x="0.0" y="0.0" width="116" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="69"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L70-X5-gad">
-                                                <rect key="frame" x="116" y="0.0" width="116" height="36"/>
+                                                <rect key="frame" x="116" y="0.0" width="116" height="69"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -184,19 +184,11 @@
                                         </subviews>
                                     </stackView>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-s2-UWj">
-                                        <rect key="frame" x="90.5" y="196" width="94" height="36"/>
+                                        <rect key="frame" x="90.5" y="261.5" width="94" height="68.5"/>
                                         <connections>
                                             <action selector="stepperValChange:" destination="kzx-eA-WtO" eventType="valueChanged" id="UVx-51-Up6"/>
                                         </connections>
                                     </stepper>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-0Y-8aT">
-                                        <rect key="frame" x="109" y="294" width="57" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Enter"/>
-                                        <connections>
-                                            <action selector="pressedBtn:" destination="kzx-eA-WtO" eventType="touchUpInside" id="4ng-xl-iHo"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="LCQ-JE-6ZF"/>
@@ -212,7 +204,20 @@
                             <constraint firstItem="7c0-BM-Hfe" firstAttribute="top" secondItem="h4z-r9-wv6" secondAttribute="top" constant="100" id="v1B-p6-kR2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Item" id="mJm-XE-1Zc"/>
+                    <navigationItem key="navigationItem" title="Add Item" id="mJm-XE-1Zc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dE2-m0-peI"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="OS6-V0-8KJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mDq-0Y-8aT">
+                                <rect key="frame" x="336" y="1" width="58" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="pressedBtn:" destination="kzx-eA-WtO" eventType="touchUpInside" id="4ng-xl-iHo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="enterBtn" destination="mDq-0Y-8aT" id="YZm-P2-bxl"/>
                         <outlet property="itemTextField" destination="oRF-rh-xdD" id="EZe-Lh-nbu"/>
