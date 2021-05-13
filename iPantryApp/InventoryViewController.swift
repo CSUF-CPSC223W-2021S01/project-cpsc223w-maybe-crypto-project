@@ -33,6 +33,7 @@ class InventoryViewController: UIViewController {
             pantry.inventory.items.remove(at: indexPath.row)
             pantry.save()
             tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
         } else if editingStyle == .insert {
         
         }
