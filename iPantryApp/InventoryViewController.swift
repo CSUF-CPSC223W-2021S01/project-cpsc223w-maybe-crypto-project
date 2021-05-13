@@ -10,11 +10,6 @@ import UIKit
 class InventoryViewController: UIViewController {
     
     //temporary array that holds the items to be displayed
-    var inventory = [
-            "apple",
-            "berries",
-            "carrots",
-        ]
     
     @IBOutlet var inventoryView: UITableView!
     

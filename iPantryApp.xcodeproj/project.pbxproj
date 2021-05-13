@@ -15,6 +15,9 @@
 		AC0DE7412638B2570023E5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0DE73F2638B2570023E5CC /* LaunchScreen.storyboard */; };
 		AC0DE74C2638B2570023E5CC /* iPantryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0DE74B2638B2570023E5CC /* iPantryAppTests.swift */; };
 		AC0DE7572638B2570023E5CC /* iPantryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0DE7562638B2570023E5CC /* iPantryAppUITests.swift */; };
+		AC4B575E264C4FE2006B6899 /* BarcodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B575D264C4FE2006B6899 /* BarcodeAPI.swift */; };
+		AC4B5763264CAB40006B6899 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B5762264CAB40006B6899 /* EnterViewController.swift */; };
+		AC4B5778264CBD05006B6899 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B5777264CBD05006B6899 /* Inventory.swift */; };
 		AC58A979263B3829002A877F /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A978263B3829002A877F /* ScannerViewController.swift */; };
 		AC58A97E263B3B4A002A877F /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A97D263B3B4A002A877F /* InventoryViewController.swift */; };
 		AC58A983263B407A002A877F /* swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A982263B407A002A877F /* swipe.swift */; };
@@ -52,6 +55,9 @@
 		AC0DE7522638B2570023E5CC /* iPantryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPantryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0DE7562638B2570023E5CC /* iPantryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPantryAppUITests.swift; sourceTree = "<group>"; };
 		AC0DE7582638B2570023E5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4B575D264C4FE2006B6899 /* BarcodeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAPI.swift; sourceTree = "<group>"; };
+		AC4B5762264CAB40006B6899 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		AC4B5777264CBD05006B6899 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		AC58A978263B3829002A877F /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		AC58A97D263B3B4A002A877F /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		AC58A982263B407A002A877F /* swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 				AC58A978263B3829002A877F /* ScannerViewController.swift */,
 				AC58A97D263B3B4A002A877F /* InventoryViewController.swift */,
 				AC58A982263B407A002A877F /* swipe.swift */,
+				AC4B575D264C4FE2006B6899 /* BarcodeAPI.swift */,
+				AC4B5762264CAB40006B6899 /* EnterViewController.swift */,
+				AC4B5777264CBD05006B6899 /* Inventory.swift */,
 			);
 			path = iPantryApp;
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4B575E264C4FE2006B6899 /* BarcodeAPI.swift in Sources */,
+				AC4B5763264CAB40006B6899 /* EnterViewController.swift in Sources */,
 				AC0DE7392638B2530023E5CC /* ViewController.swift in Sources */,
+				AC4B5778264CBD05006B6899 /* Inventory.swift in Sources */,
 				AC0DE7352638B2530023E5CC /* AppDelegate.swift in Sources */,
 				AC58A97E263B3B4A002A877F /* InventoryViewController.swift in Sources */,
 				AC0DE7372638B2530023E5CC /* SceneDelegate.swift in Sources */,

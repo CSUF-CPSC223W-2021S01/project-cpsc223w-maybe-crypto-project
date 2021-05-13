@@ -45,24 +45,85 @@
             </objects>
             <point key="canvasLocation" x="-1159.4202898550725" y="-376.33928571428572"/>
         </scene>
-        <!--Scanner View Controller-->
+        <!--Enter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ScannerViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EnterViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e6B-Sf-zLj">
+                                <rect key="frame" x="98" y="208" width="214" height="464"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-W7-XaT">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc1-tt-0TY">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="116"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-Dk-OEj">
+                                                <rect key="frame" x="82.5" y="0.0" width="131.5" height="116"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ4-Oj-4H9">
+                                        <rect key="frame" x="0.0" y="116" width="214" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quantity: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQZ-zV-Nxj">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="116"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-Vf-ES1">
+                                                <rect key="frame" x="74" y="0.0" width="140" height="116"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kPJ-dg-Uf9">
+                                        <rect key="frame" x="0.0" y="232" width="214" height="116"/>
+                                        <connections>
+                                            <action selector="stepperValChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nwd-eR-IEA"/>
+                                        </connections>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-cX-Oko">
+                                        <rect key="frame" x="0.0" y="348" width="214" height="116"/>
+                                        <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="pressedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCs-du-tXR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="OG6-qI-Prs"/>
+                                    <constraint firstAttribute="height" constant="464" id="gw1-x5-bRM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="yU8-Yq-YVp"/>
                     <connections>
+                        <outlet property="enterBtn" destination="9UT-cX-Oko" id="oq4-xM-svc"/>
+                        <outlet property="itemTextField" destination="ezm-Dk-OEj" id="194-uZ-09s"/>
+                        <outlet property="quantityLabel" destination="reE-Vf-ES1" id="aPG-Cn-7eO"/>
+                        <outlet property="stepper" destination="kPJ-dg-Uf9" id="sZb-uA-IZO"/>
                         <segue destination="EcE-4H-PMZ" kind="presentation" identifier="swipeRight" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pov-9a-uWg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-203" y="-387"/>
+            <point key="canvasLocation" x="13.043478260869566" y="-376.33928571428572"/>
         </scene>
     </scenes>
     <resources>
