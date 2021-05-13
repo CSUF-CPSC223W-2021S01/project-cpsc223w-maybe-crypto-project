@@ -25,6 +25,7 @@ class InventoryViewController: UIViewController {
         let text = notification.object as! String?
         pantry.inventory.items.append(text!)
         pantry.save()
+        inventoryView.reloadData()
     }
 
     // swipe left gesture to remove inventory items from table view.
