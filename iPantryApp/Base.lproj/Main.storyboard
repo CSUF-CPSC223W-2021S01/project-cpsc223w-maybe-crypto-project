@@ -147,8 +147,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="7c0-BM-Hfe">
-                                <rect key="frame" x="70" y="178" width="275" height="134"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="7c0-BM-Hfe">
+                                <rect key="frame" x="69" y="285" width="275" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-PQ-HQw">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="36"/>
@@ -183,21 +183,27 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-s2-UWj">
+                                        <rect key="frame" x="90.5" y="196" width="94" height="36"/>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-0Y-8aT">
+                                        <rect key="frame" x="109" y="294" width="57" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Enter"/>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="LCQ-JE-6ZF"/>
+                                    <constraint firstAttribute="height" constant="330" id="p07-mp-wxd"/>
+                                </constraints>
                             </stackView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-s2-UWj">
-                                <rect key="frame" x="160" y="320" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-0Y-8aT">
-                                <rect key="frame" x="179" y="360" width="57" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Enter"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h4z-r9-wv6"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h4z-r9-wv6" firstAttribute="trailing" secondItem="7c0-BM-Hfe" secondAttribute="trailing" constant="70" id="Uvc-bb-5d8"/>
+                            <constraint firstItem="7c0-BM-Hfe" firstAttribute="top" secondItem="h4z-r9-wv6" secondAttribute="top" constant="197" id="XT1-Ej-bF8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="mJm-XE-1Zc"/>
                 </viewController>
