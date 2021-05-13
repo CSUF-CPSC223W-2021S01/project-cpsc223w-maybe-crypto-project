@@ -11,11 +11,12 @@ class InventoryViewController: UIViewController {
 
     
     //temporary array that holds the items to be displayed
-    var inventory = [
-            "apple",
-            "berries",
-            "carrots",
-        ]
+//    var inventory = [
+//            "apple",
+//            "berries",
+//            "carrots",
+//        ]
+    var inventory: Inventory!
     
     @IBOutlet var inventoryView: UITableView!
     
@@ -29,15 +30,21 @@ class InventoryViewController: UIViewController {
 //        self.view.addGestureRecognizer(leftSwipe)
 //
 //        initiates the delegate and datasource
+        inventory = Inventory()
         inventoryView.delegate = self
         inventoryView.dataSource = self
     }
     
     @objc func didGetNotification(_ notification: Notification) {
         let text = notification.object as! String?
-        inventory.append(text!)
-        for blah in inventory {
-            print(blah)
+//        inventory.append(text!)
+//        for blah in inventory {
+//            print(blah)
+//        }
+        inventory.inventory.items.append(text!)
+        inventory.save()
+        for item in inventory.inventory.items {
+            print(item)
         }
         print(text!)
     }
@@ -45,16 +52,12 @@ class InventoryViewController: UIViewController {
     // swipe left gesture to remove inventory items from table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            inventory.remove(at: indexPath.row)
+            inventory.inventory.items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
         
         }
     }
-    
-    
-   
-
     
 
     /*
@@ -78,13 +81,13 @@ extension InventoryViewController: UITableViewDelegate {
 extension InventoryViewController: UITableViewDataSource {
     // Tells the controller how many rows are needed
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inventory.count
+        return inventory.inventory.items.count
     }
     
     // Displays the items to each row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableView.dequeueReusableCell(withIdentifier: "item", for: indexPath)
-        item.textLabel?.text = inventory[indexPath.row]
+        item.textLabel?.text = inventory.inventory.items[indexPath.row]
         return item
     }
 }
