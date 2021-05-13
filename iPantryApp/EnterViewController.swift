@@ -38,7 +38,7 @@ class EnterViewController: UIViewController {
         let quantity = Int(quantityLabel.text!)
         inventory.add(itemTextField.text!, quantity: quantity!)
         itemTextField.text = ""
-        quantityLabel.text = ""
+        quantityLabel.text = String(0)
     }
     
     /*
