@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fzv-Jj-UEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fzv-Jj-UEf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,7 +57,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="item" id="lP1-72-THZ">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lP1-72-THZ" id="NU9-QG-b5C">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -111,7 +111,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="item" id="loC-Zy-Svt">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="loC-Zy-Svt" id="zJO-do-bYn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -142,7 +142,7 @@
         <!--Add Item-->
         <scene sceneID="js3-de-tKK">
             <objects>
-                <viewController id="kzx-eA-WtO" sceneMemberID="viewController">
+                <viewController id="kzx-eA-WtO" customClass="EnterViewController" customModule="iPantryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gmc-OK-3nq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,11 +185,17 @@
                                     </stackView>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-s2-UWj">
                                         <rect key="frame" x="90.5" y="196" width="94" height="36"/>
+                                        <connections>
+                                            <action selector="stepperValChange:" destination="kzx-eA-WtO" eventType="valueChanged" id="UVx-51-Up6"/>
+                                        </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-0Y-8aT">
                                         <rect key="frame" x="109" y="294" width="57" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="pressedBtn:" destination="kzx-eA-WtO" eventType="touchUpInside" id="4ng-xl-iHo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -206,6 +212,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="mJm-XE-1Zc"/>
+                    <connections>
+                        <outlet property="enterBtn" destination="mDq-0Y-8aT" id="YZm-P2-bxl"/>
+                        <outlet property="itemTextField" destination="oRF-rh-xdD" id="EZe-Lh-nbu"/>
+                        <outlet property="quantityLabel" destination="L70-X5-gad" id="iEO-JI-PQy"/>
+                        <outlet property="stepper" destination="lAf-s2-UWj" id="qzp-hd-Xj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhg-G9-GKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
