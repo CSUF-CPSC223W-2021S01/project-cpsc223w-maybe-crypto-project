@@ -19,6 +19,7 @@ class InventoryViewController: UIViewController {
     
     @IBOutlet var inventoryView: UITableView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,8 +29,8 @@ class InventoryViewController: UIViewController {
 //        self.view.addGestureRecognizer(leftSwipe)
 //
 //        initiates the delegate and datasource
-//        inventoryView.delegate = self
-//        inventoryView.dataSource = self
+        inventoryView.delegate = self
+        inventoryView.dataSource = self
     }
     
 
