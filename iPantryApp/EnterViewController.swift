@@ -17,7 +17,6 @@ class EnterViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var enterBtn: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //swipe right gesture to inventory page
@@ -30,6 +29,8 @@ class EnterViewController: UIViewController {
     }
    
     @IBAction func pressedBtn(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name("text"), object: itemTextField.text)
+        print("blah")
         let quantity = Int(quantityLabel.text!)
 //        inventory.add(itemTextField.text!, quantity: quantity!)
         itemTextField.text = ""

@@ -22,7 +22,7 @@ class InventoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: NSNotification.Name("text"), object: nil)
 //        swipe left gesture to camera page
 //        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
 //        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
@@ -33,6 +33,14 @@ class InventoryViewController: UIViewController {
         inventoryView.dataSource = self
     }
     
+    @objc func didGetNotification(_ notification: Notification) {
+        let text = notification.object as! String?
+        inventory.append(text!)
+        for blah in inventory {
+            print(blah)
+        }
+        print(text!)
+    }
 
     // swipe left gesture to remove inventory items from table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
