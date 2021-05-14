@@ -8,26 +8,40 @@
 import XCTest
 @testable import iPantryApp
 
-class iPantryAppTests: XCTestCase {
+class IventoryViewController: XCTestCase {
+    
+    var Inventory: InventoryViewController! // Test cases apply only to InventoryViewController class only.
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+        // Instance of InventoryViewController for our tests.
+        Inventory = InventoryViewController()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        Inventory = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_item_is_nil() throws {
+    
+        // Throws error is a Item is nil by the user. Item can't be blank.
+        
+        // Use XCTAssertThrowsError(try Inventory.didGetNotficiation(), "Error, item name can not be blank.")
+        
         }
     }
-
+    func test_inventorysize() throws {
+    
+    // Use XCTAssertTrue
+    // Will check if the inventory size is 1
 }
+
+    func test_swipeDeletion() throws {
+    
+    // add XCT case here for a user trying to delete an empty row.
+    //XCTAssertThrowsError(try Inventory.tableView(), "Error, you can not delete an empty row.")
+        
+    // Use XCTAssertTrue case that asserts true if item has been deleted successfully.
+}
+
