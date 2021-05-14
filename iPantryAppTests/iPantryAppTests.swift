@@ -30,7 +30,7 @@ class IventoryViewController: XCTestCase {
         // Use XCTAssertThrowsError(try Inventory.didGetNotficiation(), "Error, item name can not be blank.")
         
         }
-    }
+    
     func test_inventorysize() throws {
     
     // Use XCTAssertTrue
@@ -43,5 +43,6 @@ class IventoryViewController: XCTestCase {
     //XCTAssertThrowsError(try Inventory.tableView(), "Error, you can not delete an empty row.")
         
     // Use XCTAssertTrue case that asserts true if item has been deleted successfully.
+   }
 }
 
