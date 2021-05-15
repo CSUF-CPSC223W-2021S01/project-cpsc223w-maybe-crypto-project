@@ -8,6 +8,8 @@
 import XCTest
 @testable import iPantryApp
 
+// We did not really have anything to test given that we could not figure out the barcode situation.
+// Our code only just adds and deletes items from the list.
 class IventoryViewController: XCTestCase {
     
     var Inventory: InventoryViewController! // Test cases apply only to InventoryViewController class only.
