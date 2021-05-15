@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Initilize the Inventory list with codable in order to save data
 struct InventoryList: Codable {
     var items: [String]
     
@@ -15,9 +16,11 @@ struct InventoryList: Codable {
     }
 }
 
+//This initlizes the Inventory structure and handles all the save data
 struct Inventory {
     var inventory: InventoryList
     
+    //Allows the items to be saved
     init() {
             let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let archiveURL = documentsDirectory.appendingPathComponent("inventory").appendingPathExtension("plist")
@@ -36,6 +39,7 @@ struct Inventory {
         inventory = InventoryList()
     }
     
+    //Saves the data to persistent data
     func save() {
             let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let archiveURL = documentsDirectory.appendingPathComponent("inventory").appendingPathExtension("plist")

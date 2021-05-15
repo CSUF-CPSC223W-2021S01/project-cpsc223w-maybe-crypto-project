@@ -30,19 +30,7 @@ class ScannerViewController: UIViewController {
     super.viewDidLoad()
     checkPermissions()
     setupCameraLiveView()
-    
-//    swipe right gesture to inventory page
-//    let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-//    print(rightSwipe)
-//    rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
-//    self.view.addGestureRecognizer(rightSwipe)
-    
   }
-//  override func viewWillDisappear(_ animated: Bool) {
-//    super.viewWillDisappear(animated)
-//    // Stop Session
-//    captureSession.stopRunning()
-//  }
 }
 
 
@@ -136,10 +124,6 @@ extension ScannerViewController {
     }
   }
 
-  // MARK: - Handler
-  func observationHandler(payload: String?) {
-    // TODO: Open it in Safari
-  }
 }
 
 

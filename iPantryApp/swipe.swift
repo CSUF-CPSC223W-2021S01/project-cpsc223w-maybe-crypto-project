@@ -8,6 +8,7 @@ import UIKit
 import Foundation
 
 //allows swipe function to work on both inventory and camera view controllers since we extended the UIViewController
+//this is no longer in use because we took out the swipe feature
 extension UIViewController {
    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
         switch swipe.direction.rawValue {

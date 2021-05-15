@@ -19,31 +19,23 @@ class EnterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //swipe right gesture to inventory page
-        
+        //Allows continous increment or decrement when pressed down
         stepper.autorepeat = true
     }
     
+    //changes the quantity label to match the Uistepper
     @IBAction func stepperValChange(_ sender: UIStepper) {
         quantityLabel.text = Int(sender.value).description
     }
    
+    
     @IBAction func pressedBtn(_ sender: Any) {
+        //Sends the user item name to the inventory view controller.
         NotificationCenter.default.post(name: Notification.Name("text"), object: itemTextField.text)
-        print("blah")
-        let quantity = Int(quantityLabel.text!)
-//        inventory.add(itemTextField.text!, quantity: quantity!)
+        
+        //Changes text back to empty after pressing send
         itemTextField.text = ""
         quantityLabel.text = String(0)
     }
-    
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
